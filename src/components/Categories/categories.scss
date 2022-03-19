@@ -1,0 +1,52 @@
+@import "../../default.scss";
+
+.CategoriesBar {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  display: flex;
+  width: 81.5%;
+  color: $gold-dark;
+  position: fixed;
+  margin-top: -5rem;
+  z-index: 2;
+  background-color: $black-secondary;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  scrollbar-width: none;
+
+  span {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    white-space: nowrap;
+    border: 1.5px solid $gold;
+    border-radius: 9999px;
+    background-color: $black-light;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &.active {
+      color: $active-category;
+      background-color: $active-background-category;
+      border-color: $border-color;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .CategoriesBar {
+    width: 82%;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .CategoriesBar {
+    width: 88%;
+  }
+}
